@@ -1,4 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and AWS Amplify.
+
+A show-n-tell DEV site is available [here](http://auth-100-20190320122941-hostingbucket-dev.s3-website-us-east-1.amazonaws.com/).
+
+Overview:
+This is one ‘starting point’ module of a larger set of modules needed to produce a full PROD single page site that is highly secure, authenticated, offers high availability and easy open-ended scalability. This barebones DEV project shows user management. Styling, content, and navigation is held to a minimum while user management processing is developed.  
+We use [AWS Amplify](https://aws-amplify.github.io/) to setup a [Cognito infrastructure](https://aws-amplify.github.io/docs/js/authentication). The user management functionality includes:
+
+- User sign-up with email delivered confirmation code.
+- User sign-in with ‘forgot password’.
+- Once user is signed in, change password.
+- Additional change functionality can be added easily as needed (change email, phone, etc.)
+  User input is validated in browser useing [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) validation checks (i.e. correct formatted emails). Password requirements are setup in and enforced by Cognito (8 characters including one special character) as well as process exception handling (i.e. ‘user already exists’, ‘incorrect username/password’ and the like).
+  The implementation is coded 100% functional JavaScript in ReactJS with use of [hooks](https://reactjs.org/docs/hooks-intro.html) for creating and managing the global state of the app using useContext, useState, useReducer, useEffect and so on.
+
+AWS Apmlify and Build directories and Congito config file is not included in this GitHub repository.
 
 ## Available Scripts
 
