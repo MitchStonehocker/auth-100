@@ -1,0 +1,8 @@
+.signup {
+  padding: 5rem;
+  margin: 0rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
